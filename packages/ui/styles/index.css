@@ -87,16 +87,15 @@ input[type='number']::-webkit-outer-spin-button {
   }
 
   .dark {
-    --white: 17, 18, 19;
-    --light: 25, 29, 31;
+    --vanta: 0, 0, 0;
+    --black: 21, 22, 23;
     --dark: 243, 246, 248;
-    --black: 255, 255, 255;
+    --light: 243, 246, 248;
+    --white: 243, 246, 248;
+    --brand: 123, 97, 255;
+    --active: 179, 160, 255;
     --error: 199, 62, 89;
     --valid: 57, 166, 153;
-    --brand: 95, 94, 255;
-    --active: 77, 76, 185;
-    --accent: 253, 67, 107;
-    --very-light: 9, 13, 16;
   }
 
   .hero-text {
@@ -105,7 +104,7 @@ input[type='number']::-webkit-outer-spin-button {
     font-weight: 700;
     font-size: 54px;
     line-height: 1;
-    color: rgba(var(--dark, 1));
+    color: rgba(var(--white, 1));
   }
 
   .header-text {
@@ -113,7 +112,7 @@ input[type='number']::-webkit-outer-spin-button {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: rgba(var(--dark), 1);
+    color: rgba(var(--white), 1);
   }
 
   .title-text {
@@ -121,7 +120,7 @@ input[type='number']::-webkit-outer-spin-button {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    color: rgba(var(--dark), 1);
+    color: rgba(var(--white), 1);
   }
 
   .primary-text {
@@ -129,7 +128,7 @@ input[type='number']::-webkit-outer-spin-button {
     font-weight: 500;
     font-size: 15px;
     line-height: 20px;
-    color: rgba(var(--dark), 0.95);
+    color: rgba(var(--white), 1);
   }
 
   .body-text {
@@ -137,14 +136,22 @@ input[type='number']::-webkit-outer-spin-button {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: rgba(var(--dark), 0.95);
+    color: rgba(var(--white), 1);
   }
 
   .button-text {
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
+    color: rgba(var(--white), 1);
+  }
+
+  .button-text-sm {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
     color: rgba(var(--white), 1);
   }
 
@@ -153,7 +160,7 @@ input[type='number']::-webkit-outer-spin-button {
     font-weight: 500;
     font-size: 13px;
     line-height: 20px;
-    color: rgba(var(--dark), 0.95);
+    color: rgba(var(--light), 0.7);
   }
 
   .secondary-text {
@@ -161,7 +168,7 @@ input[type='number']::-webkit-outer-spin-button {
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
-    color: rgba(var(--dark), 0.75);
+    color: rgba(var(--light), 0.7);
   }
 
   .caption-text {
@@ -169,7 +176,7 @@ input[type='number']::-webkit-outer-spin-button {
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-    color: rgba(var(--dark), 0.6);
+    color: rgba(var(--light), 0.5);
   }
 
   .gradient-text {

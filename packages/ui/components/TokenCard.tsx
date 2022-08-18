@@ -28,8 +28,8 @@ export const TokenCard = ({
   const { t } = useTranslation()
 
   return (
-    <div className="rounded-lg border border-default">
-      <div className="flex flex-row justify-between p-5 border-b border-inactive">
+    <div className="rounded-lg border border-border-primary">
+      <div className="flex flex-row justify-between p-5 border-b border-border-secondary">
         <div className="relative">
           <div className="flex flex-row gap-4">
             <div
@@ -65,7 +65,7 @@ export const TokenCard = ({
       </div>
       <div className="flex justify-between py-4 px-5">
         <p className="secondary-text">{t('info.daoBalance')}</p>
-        <p className="font-mono text-black caption-text">
+        <p className="font-mono text-text-body caption-text">
           {tokenBalance} ${tokenSymbol}{' '}
           <span className="caption-text">
             {t('format.usdc', { val: tokenBalanceUSDCEquivalent })}

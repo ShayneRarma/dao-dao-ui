@@ -12,7 +12,7 @@ import { Logo as DefaultLogo, LogoProps } from '../Logo'
 export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'ghost'
-  size?: 'sm' | 'lg'
+  size?: 'sm' | 'lg' | 'default'
   disabled?: boolean
   className?: string
   loading?: boolean
@@ -39,24 +39,36 @@ function ButtonComponent(
 ) {
   const isDisabled = disabled || loading
 
-  return variant === 'primary' || variant === 'secondary' ? (
+  return (
     <button
       className={clsx(
-        'relative py-[6px] px-[16px] rounded-md transition',
+        'relative text-text-button-primary rounded-md focus:outline-2 focus:outline-background-button-disabled transition stroke-current',
         {
-          // Primary
-          'text-light bg-btn link-text': variant === 'primary',
-          'hover:bg-dark active:bg-toast': variant === 'primary' && !isDisabled,
-          'bg-dark': variant === 'primary' && active,
-          // Secondary
-          'bg-primary link-text': variant === 'secondary',
-          'hover:bg-btn-secondary-hover active:bg-btn-secondary-pressed':
-            variant === 'secondary' && !isDisabled,
-          'bg-btn-secondary-hover': variant === 'secondary' && active,
-          // Shared
-          'bg-btn-disabled': isDisabled,
-          'py-[10px]': size === 'lg',
-          'py-[4px] px-[8px]': size === 'sm',
+          // Primary.
+          'bg-background-button': variant === 'primary',
+          'hover:bg-background-button-hover active:bg-background-button-pressed':
+            !disabled && variant === 'primary',
+          'bg-background-button-disabled': disabled && variant === 'primary',
+
+          // Secondary variant.
+          'text-icon-primary bg-button-secondary-default':
+            variant === 'secondary' && !active,
+          'hover:bg-button-secondary-hover active:bg-button-secondary-pressed':
+            !disabled && variant === 'secondary',
+          'bg-button-secondary-disabled': disabled && variant === 'secondary',
+          'text-text-interactive-active bg-background-interactive-active':
+            variant === 'secondary' && active,
+
+          // Ghost variant.
+          'text-icon-primary bg-transparent': variant === 'ghost',
+          'hover:bg-background-interactive-hover active:bg-background-interactive-pressed':
+            !disabled && variant === 'ghost',
+          'bg-transparent': disabled && variant === 'ghost',
+
+          // Large.
+          'py-[10px] px-[14px] button-text': size === 'lg',
+          'py-1 px-2 button-text-sm': size === 'sm',
+          'py-[6px] px-[10px] link-text': size === 'default',
         },
         className
       )}
@@ -71,7 +83,7 @@ function ButtonComponent(
             invisible: !loading,
           })}
         >
-          <Logo invert size={20} />
+          <Logo size={20} />
         </div>
       </div>
       <div
@@ -86,22 +98,7 @@ function ButtonComponent(
         {children}
       </div>
     </button>
-  ) : variant === 'ghost' ? (
-    <button
-      className={clsx(
-        'flex flex-row gap-2 items-center text-secondary transition link-text',
-        { 'hover:text-primary': !isDisabled, 'text-primary': active },
-        className,
-        contentContainerClassName
-      )}
-      disabled={isDisabled}
-      ref={ref}
-      type={type}
-      {...rest}
-    >
-      {children}
-    </button>
-  ) : null
+  )
 }
 
 export const Button = forwardRef(ButtonComponent)

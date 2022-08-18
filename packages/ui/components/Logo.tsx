@@ -17,6 +17,7 @@ export const Logo = ({ size = 28, invert, className }: LogoProps) => {
       className={className}
       fill="none"
       height={size}
+      stroke="none"
       viewBox={`0 0 28 28`}
       width={size}
       xmlns="http://www.w3.org/2000/svg"

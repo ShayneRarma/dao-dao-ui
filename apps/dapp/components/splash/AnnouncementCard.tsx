@@ -8,13 +8,7 @@ export const AnouncementCard = () => {
   const { t } = useTranslation()
 
   return (
-    <div
-      className="flex flex-row flex-wrap gap-2 justify-between py-7 px-8 mx-2 max-w-[780px] rounded"
-      style={{
-        backgroundImage:
-          'linear-gradient(rgba(var(--brand), 0.1), rgba(var(--brand), 0.1)), linear-gradient(rgba(var(--light), 0.7), rgba(var(--light), 0.7))',
-      }}
-    >
+    <div className="flex flex-row flex-wrap gap-2 justify-between py-7 px-8 mx-2 max-w-[780px] bg-card rounded">
       <div className="flex flex-col gap-1">
         <h3 className="primary-text">{t('splash.whatIsADao')}</h3>
         <p className="body-text">{t('splash.whatIsADaoExplanation')}</p>

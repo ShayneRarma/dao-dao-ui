@@ -6,7 +6,7 @@ import { Head, Html, Main, NextScript } from 'next/document'
 const Document = () => (
   <Html>
     <Head />
-    <body className="antialiased bg-white body-text">
+    <body className="antialiased text-text-body bg-background-base">
       <Main />
       <NextScript />
     </body>
