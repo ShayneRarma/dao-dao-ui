@@ -1,5 +1,8 @@
+import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
+import { StargateClient } from '@cosmjs/stargate'
 import { ChainInfoID, ChainInfoMap } from '@noahsaso/cosmodal'
 
+import { cosmWasmClientRouter, stargateClientRouter } from './client'
 import {
   CHAIN_ID,
   CHAIN_RPC_ENDPOINT,
@@ -31,3 +34,15 @@ export const getUrlBaseForChainId = (chainId: string): string =>
     : chainId === ChainInfoID.Uni5
     ? 'https://testnet.daodao.zone'
     : ''
+
+export const getCosmWasmClientForChain = async (
+  chainId: string,
+  rpc?: string
+): Promise<CosmWasmClient> =>
+  await cosmWasmClientRouter.connect(rpc || getRpcForChainId(chainId))
+
+export const getStargateClientForChain = async (
+  chainId: string,
+  rpc?: string
+): Promise<StargateClient> =>
+  await stargateClientRouter.connect(rpc || getRpcForChainId(chainId))

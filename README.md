@@ -60,6 +60,7 @@ If something is misconfigured, check out the docs for
 | Package                             | Summary                                                                                               |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | [`config`](./packages/config)       | Configurations for various dev tools.                                                                 |
+| [`core`](./packages/core)           | Core library for interacting with DAO DAO contracts from other projects.                              |
 | [`i18n`](./packages/i18n)           | Internationalization/translation system.                                                              |
 | [`state`](./packages/state)         | State retrieval and management for the DAO DAO UI.                                                    |
 | [`stateful`](./packages/stateful)   | Stateful components, hooks, and systems that access and manipulate live data.                         |

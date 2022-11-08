@@ -18,7 +18,8 @@
     "stateful": "yarn workspace @dao-dao/stateful",
     "storybook": "yarn workspace @dao-dao/storybook",
     "types": "yarn workspace @dao-dao/types",
-    "utils": "yarn workspace @dao-dao/utils"
+    "utils": "yarn workspace @dao-dao/utils",
+    "core": "yarn workspace @dao-dao/core"
   },
   "devDependencies": {
     "turbo": "latest"

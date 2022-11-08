@@ -27,13 +27,13 @@ import {
   CHAIN_ID,
   NATIVE_DECIMALS,
   NATIVE_DENOM,
-  cosmWasmClientRouter,
   getAllRpcResponse,
+  getCosmWasmClientForChain,
   getRpcForChainId,
+  getStargateClientForChain,
   nativeTokenDecimals,
   nativeTokenLabel,
   nativeTokenLogoURI,
-  stargateClientRouter,
 } from '@dao-dao/utils'
 
 import {
@@ -48,9 +48,7 @@ export const stargateClientForChainSelector = selectorFamily<
 >({
   key: 'stargateClientForChain',
   get: (chainId) => async () =>
-    await stargateClientRouter.connect(
-      chainId ? getRpcForChainId(chainId) : getRpcForChainId(CHAIN_ID)
-    ),
+    await getStargateClientForChain(chainId || CHAIN_ID),
 })
 
 export const cosmWasmClientForChainSelector = selectorFamily<
@@ -59,9 +57,7 @@ export const cosmWasmClientForChainSelector = selectorFamily<
 >({
   key: 'cosmWasmClientForChain',
   get: (chainId) => async () =>
-    await cosmWasmClientRouter.connect(
-      chainId ? getRpcForChainId(chainId) : getRpcForChainId(CHAIN_ID)
-    ),
+    await getCosmWasmClientForChain(chainId || CHAIN_ID),
 })
 
 export const cosmosRpcClientForChainSelector = selectorFamily({

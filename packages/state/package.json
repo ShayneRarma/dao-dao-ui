@@ -24,6 +24,7 @@
     "@dao-dao/config": "2.0.1",
     "@dao-dao/types": "2.0.1",
     "@noahsaso/cosmodal": "^0.8.0",
+    "eslint": "^8.23.1",
     "typescript": "^4.8.3"
   },
   "prettier": "@dao-dao/config/prettier",

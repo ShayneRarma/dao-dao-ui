@@ -1,0 +1,12 @@
+{
+  "extends": "@dao-dao/config/ts/base.json",
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "target": "es6",
+    "noEmit": false,
+    "outDir": "dist",
+    "module": "commonjs",
+    "jsx": "preserve"
+  }
+}
