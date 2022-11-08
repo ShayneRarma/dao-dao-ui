@@ -7,6 +7,6 @@
     "noEmit": false,
     "outDir": "dist",
     "module": "commonjs",
-    "jsx": "preserve"
+    "jsx": "react-jsx"
   }
 }

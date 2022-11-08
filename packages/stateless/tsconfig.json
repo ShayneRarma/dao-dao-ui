@@ -1,8 +1,9 @@
 {
   "extends": "@dao-dao/config/ts/react-library.json",
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["build", "dist", "node_modules"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "module": "commonjs"
+    // Must be specified even when extending from a base config.
+    "outDir": "dist"
   }
 }

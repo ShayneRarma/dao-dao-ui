@@ -1,7 +1,9 @@
 {
   "name": "@dao-dao/utils",
   "version": "2.0.1",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "format": "eslint . --fix",
     "lint": "eslint ."
   },
