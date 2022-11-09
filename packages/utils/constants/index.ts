@@ -49,7 +49,7 @@ export const POOLS_LIST_URL = process.env.NEXT_PUBLIC_POOLS_LIST_URL as string
 export const CI = process.env.CI === 'true'
 
 // Code IDs
-if (!(CHAIN_ID in CodeIdConfigs)) {
+if (CHAIN_ID && !(CHAIN_ID in CodeIdConfigs)) {
   console.error(`Chain ID '${CHAIN_ID}' not found in Code ID Configs`)
 }
 export const CODE_ID_CONFIG = CodeIdConfigs[CHAIN_ID]!
