@@ -1,11 +1,10 @@
 {
   "extends": "@dao-dao/config/ts/base.json",
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "es6",
-    "noEmit": false,
-    "outDir": "dist",
+    "noEmit": true,
     "module": "commonjs",
     "jsx": "react-jsx"
   }

@@ -8,6 +8,6 @@
     "module": "esnext",
     "target": "es6",
     "allowJs": true,
-    "noEmit": false
+    "noEmit": true
   }
 }
