@@ -5,7 +5,7 @@
   "compilerOptions": {
     "target": "es6",
     "noEmit": true,
-    "module": "commonjs",
+    "module": "esnext",
     "jsx": "react-jsx"
   }
 }

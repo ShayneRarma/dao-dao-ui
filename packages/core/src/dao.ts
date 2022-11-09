@@ -1,7 +1,7 @@
-import { CwCoreV1QueryClient, CwdCoreV2QueryClient } from '@dao-dao/state'
-import { fetchProposalModules } from '@dao-dao/stateful'
+import { CwCoreV1QueryClient, CwdCoreV2QueryClient } from '@dao-dao/state/contracts'
+import { fetchProposalModules } from '@dao-dao/stateful/utils/fetchProposalModules'
 import { ContractVersion } from '@dao-dao/types'
-import { parseContractVersion } from '@dao-dao/utils'
+import { parseContractVersion } from '@dao-dao/utils/contracts'
 
 import {
   Dao,

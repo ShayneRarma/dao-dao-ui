@@ -4,11 +4,9 @@ import { useTranslation } from 'react-i18next'
 import { CreateDaoContext } from '@dao-dao/types'
 import { parseEncodedMessage, processError } from '@dao-dao/utils'
 
-import {
-  Checkbox,
-  CosmosMessageDisplay,
-  DaoCreateConfigReviewCard,
-} from '../../..'
+import { CosmosMessageDisplay } from '../../../CosmosMessageDisplay'
+import { Checkbox } from '../../../inputs/Checkbox'
+import { DaoCreateConfigReviewCard } from '../DaoCreateConfigReviewCard'
 
 export const CreateDaoReview = ({
   form: { watch },

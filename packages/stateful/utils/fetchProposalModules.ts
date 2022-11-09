@@ -1,6 +1,9 @@
 import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
 
-import { CwCoreV1QueryClient, CwdCoreV2QueryClient } from '@dao-dao/state'
+import {
+  CwCoreV1QueryClient,
+  CwdCoreV2QueryClient,
+} from '@dao-dao/state/contracts'
 import {
   ContractVersion,
   FetchPreProposeAddressFunction,

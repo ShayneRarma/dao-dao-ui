@@ -1,7 +1,7 @@
 import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate'
 import { StargateClient } from '@cosmjs/stargate'
 
-import { CwCoreV1QueryClient, CwdCoreV2QueryClient } from '@dao-dao/state'
+import { CwCoreV1QueryClient, CwdCoreV2QueryClient } from '@dao-dao/state/contracts'
 import { ContractVersion, ProposalModule } from '@dao-dao/types'
 
 export type DaoDaoClientOptions =

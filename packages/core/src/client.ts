@@ -1,7 +1,7 @@
 import {
   getCosmWasmClientForChain,
   getStargateClientForChain,
-} from '@dao-dao/utils'
+} from '@dao-dao/utils/chain'
 
 import { makeGetDao } from './dao'
 import { DaoDaoClient, DaoDaoClientOptions } from './types'
