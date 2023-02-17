@@ -35,5 +35,9 @@
   },
   "prettier": "@dao-dao/config/prettier",
   "packageManager": "yarn@1.22.11",
-  "private": true
+  "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/ShayneRarma/dao-dao-ui.git",
+  "author": "ShayneRarma <shaynerarma@hotmail.com>",
+  "license": "MIT"
 }
